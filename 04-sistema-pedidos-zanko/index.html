@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="syle.css" />
+    <title>Pedidos - Tienda Zanko - Calzados</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registrar Pedido</h1>
+
+      <div class="main-content">
+        <div class="status-message" id="statusMessage"></div>
+
+        <div class="controls">
+          <input type="file" id="inputJson" accept=".json" />
+          <select id="productoSelect"></select>
+          <input type="number" id="cantidad" placeholder="Cantidad" min="1" />
+          <input type="text" id="cliente" placeholder="Nombre del cliente" />
+          <input type="text" id="talle" placeholder="Talle pedido" />
+          <div class="color-selector">
+            <input type="text" id="color" placeholder="Color" list="colors" />
+            <div class="color-preview" id="colorPreview"></div>
+          </div>
+
+          <datalist id="colors">
+            <option value="Blanco"></option>
+            <option value="Negro"></option>
+            <option value="Rojo"></option>
+            <option value="Azul"></option>
+            <option value="Verde"></option>
+            <option value="Amarillo"></option>
+            <option value="Rosa"></option>
+            <option value="Gris"></option>
+            <option value="Multicolor"></option>
+          </datalist>
+        </div>
+
+        <button class="btn btn-primary" onclick="agregarPedido()">
+          <i class="fas fa-plus"></i> Agregar Pedido
+        </button>
+
+        <h2>Pedidos</h2>
+        <table id="tablaPedidos">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Cliente</th>
+              <th>Talle</th>
+              <th>Color</th>
+              <th>Producto</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="total-summary">
+          Total General: <span id="totalGeneral">$0.00</span>
+        </div>
+
+        <button class="btn btn-success" onclick="exportarExcel()">
+          <i class="fas fa-file-excel"></i> Descargar Excel
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
