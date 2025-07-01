@@ -68,6 +68,7 @@ Permite extraer, limpiar, comparar y gestionar catálogos desde **WhatsApp Web**
 - HTML
 - CSS
 - JavaScript
-- SheetJS (`xlsx`) – para exportar a Excel
+- csv-writer (exportación a CSV/Excel)
+- fs (lectura/escritura de archivos)
 
 ---
