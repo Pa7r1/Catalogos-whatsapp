@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Comparador de Catálogos</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🔍 Comparador de Catálogos</h1>
+        <p class="subtitle">
+          Compara tu catálogo con el de proveedores para identificar
+          oportunidades y diferencias
+        </p>
+      </header>
+
+      <div class="main-content">
+        <div class="info-box">
+          <p>
+            <span class="highlight">Importante:</span> Esta herramienta compara
+            <strong>solo por nombre de producto</strong>. Ambos archivos deben
+            estar en formato JSON.
+          </p>
+        </div>
+
+        <div class="upload-section">
+          <div class="upload-card">
+            <h3><i>📁</i> Tu catálogo (.json)</h3>
+            <div class="file-input-wrapper">
+              <input type="file" id="archivoUsuario" accept=".json" />
+              <label for="archivoUsuario" class="file-input-label"
+                >Seleccionar archivo</label
+              >
+            </div>
+            <div id="nombreUsuario" class="file-name">
+              No se ha seleccionado ningún archivo
+            </div>
+          </div>
+
+          <div class="upload-card">
+            <h3><i>📦</i> Catálogo del proveedor (.json)</h3>
+            <div class="file-input-wrapper">
+              <input type="file" id="archivoProveedor" accept=".json" />
+              <label for="archivoProveedor" class="file-input-label"
+                >Seleccionar archivo</label
+              >
+            </div>
+            <div id="nombreProveedor" class="file-name">
+              No se ha seleccionado ningún archivo
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-stats">
+          <div class="stat-box">
+            <div class="stat-label">Productos en tu catálogo</div>
+            <div id="totalUsuario" class="stat-value">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Productos del proveedor</div>
+            <div id="totalProveedor" class="stat-value">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Productos en común</div>
+            <div id="totalComunes" class="stat-value">0</div>
+          </div>
+        </div>
+
+        <div class="compare-btn-container">
+          <button id="comparar" disabled>Comparar catálogos</button>
+        </div>
+
+        <div class="loading" id="cargando">
+          <div class="spinner"></div>
+          <p>Procesando archivos, por favor espera...</p>
+        </div>
+
+        <div class="results-section">
+          <div class="results-card">
+            <h3><i>⚠️</i> Productos que solo tú tienes</h3>
+            <div id="soloUsuarioContainer">
+              <ul id="soloUsuario" class="results-list solo-usuario"></ul>
+              <div class="stats">
+                <span id="contadorUsuario">0 productos</span>
+                <span id="porcentajeUsuario">0% de tu catálogo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="results-card">
+            <h3><i>⚠️</i> Productos que solo el proveedor tiene</h3>
+            <div id="soloProveedorContainer">
+              <ul id="soloProveedor" class="results-list solo-proveedor"></ul>
+              <div class="stats">
+                <span id="contadorProveedor">0 productos</span>
+                <span id="porcentajeProveedor">0% del proveedor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          Comparador de Catálogos &copy; 2023 - Solo comparación por nombre de
+          producto
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
