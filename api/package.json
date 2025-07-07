@@ -12,7 +12,6 @@
   },
   "author": "patricio carpio",
   "license": "ISC",
-  "bugs": {},
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
