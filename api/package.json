@@ -8,15 +8,11 @@
     "dev": "node --env-file=.env --watch app.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Pa7r1/Catalogos-whatsapp.git"
+    "type": "git"
   },
   "author": "patricio carpio",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Pa7r1/Catalogos-whatsapp/issues"
-  },
-  "homepage": "https://github.com/Pa7r1/Catalogos-whatsapp#readme",
+  "bugs": {},
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
