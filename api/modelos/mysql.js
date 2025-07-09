@@ -3,6 +3,7 @@ import configDatabase from "../config.js";
 
 const configDB = {
   host: configDatabase.mysql.host,
+  port: configDatabase.mysql.port,
   user: configDatabase.mysql.user,
   password: configDatabase.mysql.password,
   database: configDatabase.mysql.database,
