@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=.env --watch app.js"
+    "dev": "node --env-file=.env --watch app.js",
+    "build": "node --env-file=.env ./modelos/cargaDatos.js"
   },
   "repository": {
     "type": "git"
